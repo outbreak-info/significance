@@ -9,7 +9,10 @@ def load_data(data_folder):
     for record in records:
         doc = {}
         for i, key in enumerate(doc_keys):
-            doc[key] = record[i]
+            if key == 'growing':
+                doc[key] = record[i].lower()
+            else:
+                doc[key] = record[i]
         doc["_id"] = doc["loc"] + "_" + doc["lin"]
         yield doc
 
