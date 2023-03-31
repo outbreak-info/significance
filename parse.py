@@ -17,7 +17,6 @@ def load_data(data_folder):
 def custom_data_mapping(cls):
     return {
         "growing": {
-            "normalizer": "keyword_lowercase_normalizer",
             "type": "boolean"
         },
         "lin": {
